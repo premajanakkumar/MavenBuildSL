@@ -56,3 +56,24 @@
             </executions>
         </plugin>
           
+           <!-- Clover Plugin -->
+           <plugin>
+            <groupId>com.atlassian.maven.plugins</groupId>
+            <artifactId>maven-clover2-plugin</artifactId>
+            <version>4.2.0</version>
+            <configuration>
+                <generateXml>true</generateXml>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>instrument</goal>
+                        <goal>clover</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        </plugins>
+  </build>
+</project>
